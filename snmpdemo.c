@@ -144,11 +144,6 @@ void UserSnmpDemo(void)
 		uint32 *tim_stamp1 = &b;
 		uint32 *tim_stamp2 = &c;
 		
-//		for(int i = 0;i <3; i++)
-//		{
-//			SnmpXTrapSend("192.168.12.113", "192.168.12.114", "public", enterprise_oid, 1, 0, 0);
-//			SnmpXTrapSend("192.168.12.113", "192.168.12.114", "public", enterprise_oid, 6, 0, 2, &trap_oid1, &trap_oid2);
-//		}
 		// SnmpXTrapSend("192.168.12.113", "192.168.12.114", "public", enterprise_oid, warmStart, 0, tim_stamp1, 0);
 		// SnmpXTrapSend("192.168.12.113", "192.168.12.114", "public", enterprise_oid, enterpriseSpecific, 0, tim_stamp2, 2, &trap_oid1, &trap_oid2);
 		Snmp2TrapSend("192.168.12.113", "public", NO_ERROR, 0, 0);
@@ -159,20 +154,6 @@ void UserSnmpDemo(void)
 	SnmpXDaemon();
 }
 
-//uint16 UDP_send()
-//{ 	 uint8 ipaddr[]={192,168,12,113};
-//     uint8 data[]={0x30 ,0x28 ,0x02 ,0x01 ,0x00 ,0x04 ,0x06 
-//	 ,0x70 ,0x75 ,0x62 ,0x6C ,0x69 ,0x63 ,0xA4 ,0x1B ,0x06 
-//	 ,0x08 ,0x2B ,0x06 ,0x01 ,0x04 ,0x01 ,0x00 ,0x10 ,0x00 
-//	 ,0x40 ,0x04 ,0xC0 ,0xA8 ,0x0C ,0x72 ,0x02 ,0x01 ,0x01 
-//	 ,0x02 ,0x01 ,0x00 ,0x43 ,0x01 ,0x00 ,0x30 ,0x00 };
-//		socket(3,2,162,0);
-
-//		uint16 flag = sendto(3, data, 42, ipaddr, 162);
-
-//		close(3);
-//	return flag;
-//}
 /*
 #ifdef WIN32
 int32 main(int32 argc, int8 *argv[])

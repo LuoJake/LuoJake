@@ -12,5 +12,4 @@ void getWIZnetLed(void *ptr, uint8 *len);
 void setWIZnetLed(int32 val);
 void UserSnmpDemo(void);
 
-uint16 UDP_send(void);
 #endif

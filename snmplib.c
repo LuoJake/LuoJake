@@ -332,37 +332,12 @@ int32 parsebulkVarBind(int32 reqType, int32 index)
 	if ( request_msg.buffer[request_msg.index] != SNMPDTYPE_OBJ_ID ) return -1;
 
 	id = findEntry(&request_msg.buffer[name.vstart], name.len);
-	// if (reqType == GET_BULK_REQUEST)
-	// {
+
 	int bulkCount = 0;
-	//int bulkSize = 5; // For example, you can set the bulk size to 5
+
 	uint8 dataType;
 	int32 datalen, namelen;
 		
-		// if(++id >= maxData)
-		// {
-		// 	response_msg.buffer[response_msg.index] = SNMPDTYPE_SEQUENCE_OF; //30
-		// 	int32 len_index = response_msg.index+1; //len
-		// 	response_msg.index += 2; 
-
-		// 	id = OID_NOT_FOUND;
-		// 	seglen = name.nstart - name.start;
-		// 	COPY_SEGMENT_TEMP2014(name);
-		// 	size += seglen;
-
-		// 	parseTLV(request_msg.buffer, request_msg.index, &value);
-
-		// 	seglen = value.nstart - value.start;
-		// 	COPY_SEGMENT_TEMP2014(value);
-		// 	size += seglen;
-
-		// 	response_msg.buffer[len_index] = size;
-
-		// 	errorIndex = index;
-		// 	errorStatus = NO_SUCH_NAME;
-
-		// 	size += 2;
-		// }
 	if(id == OID_NOT_FOUND)
 	{
 		response_msg.buffer[response_msg.index] = SNMPDTYPE_SEQUENCE_OF; //30
