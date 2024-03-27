@@ -45,7 +45,7 @@ dataEntryType snmpData[] =
 	SNMPDTYPE_OCTET_STRING, 30, {"4F Humax Village"},
 	NULL, NULL},
 
-	// SysServices        
+	// SysServices             
 //	{read_only, 8, {0x2b, 6, 1, 2, 1, 1, 7, 0}, 
 //	SNMPDTYPE_INTEGER, 4, {""}, 
 //	NULL, NULL},
